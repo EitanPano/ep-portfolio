@@ -1,0 +1,13 @@
+// SETUP
+@import 'setup/variables';
+@import 'setup/functions';
+@import 'setup/mixins';
+@import 'setup/sanitize';
+@import 'setup/typography';
+
+// BASE Files
+@import 'base/layout';
+
+// COMPONENTS
+@import 'components/app-header';
+@import 'components/app-footer';

@@ -1,0 +1,71 @@
+@import 'burger-menu';
+
+.app-header {
+    background-color: #333;
+    border-bottom: solid em(2px) rgba(0, 0, 0, 0.4);
+
+    .main-nav {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    
+    .main-routes, .main-menu, .app-logo {
+        display: flex;
+        margin: 0;
+        & h2 {
+            margin: 0;
+        }
+    }
+
+    .app-logo {
+        justify-content: center;
+    }
+
+    .main-routes {
+        display: none;
+        & > * {
+            width: 5em;
+        }
+    }
+
+    .main-menu {
+        justify-content: end;
+    }
+
+    .nav-link {
+        padding: 0 0.5em;
+        line-height: 4em;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .main-nav .nav-link:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .main-nav .nav-link.active {
+        background-color: #04aa6d;
+        color: white;
+    }
+}
+
+@include for-small-layout {
+    .app-header {
+        
+        .burger {
+            display: none;
+        }
+
+        .app-logo {
+            justify-content: start;
+        }
+        
+        .main-routes {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

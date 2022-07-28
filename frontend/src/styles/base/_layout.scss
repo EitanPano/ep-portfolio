@@ -1,0 +1,46 @@
+.main-layout {
+    grid-template-columns: $layoutPadding 1fr $layoutPadding;
+
+    > * {
+        grid-column: 2;
+    }
+
+    > *.full {
+        grid-column: 1 / -1;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(12em, 1fr));
+    padding: 0 1em;
+    gap: 1.5em;
+    grid-auto-flow: dense;
+
+}
+
+@include for-small-layout{
+    .grid-container {
+        padding: 0 3em;
+    }
+}
+@include for-medium-layout{
+    .grid-container {
+        padding: 0 5em;
+    }
+}
+@include for-large-layout{
+    .grid-container {
+        padding: 0 8em;
+    }
+}
+@include for-x-large-layout{
+    .grid-container {
+        padding: 0 12em;
+    }
+}
+@include for-xx-large-layout{
+    .grid-container {
+        padding: 0 20em;
+    }
+}
