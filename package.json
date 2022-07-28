@@ -1,0 +1,37 @@
+{
+  "name": "ep-portfolio",
+  "version": "1.0.0",
+  "description": "Eitan Pano programmer portfolio.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-json-modules backend/server.js",
+    "server": "set NODE_ENV=development&&nodemon --experimental-json-modules backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "keywords": [
+    "portfolio",
+    "web-developer",
+    "programmer"
+  ],
+  "author": "Eitan Pano",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "chalk": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
