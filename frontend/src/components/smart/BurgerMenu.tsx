@@ -1,11 +1,14 @@
 export const BurgerMenu = () => {
     return (
-        <div className="burger">
-            <div className="strip burger-strip">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
+        <>
+            <input type="checkbox" id="burger-toggle" name="burger-toggle" className="burger-toggle" />
+            <label htmlFor="burger-toggle" className="burger">
+                <div className="bars">
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                </div>
+            </label>
+        </>
     );
 };

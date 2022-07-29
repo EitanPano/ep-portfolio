@@ -6,35 +6,44 @@
     justify-content: center;
     align-items: center;
     transition: all 0.5s ease;
+
+    .bars {
+        transition: all 0.5s ease;
+    }
+    .bars .bar {
+        height: 3px;
+        border-radius: 2px;
+        background: rgb(240, 240, 240);
+        margin: 10px;
+        transition: all 0.55s cubic-bezier(0.075, 0.82, 0.165, 1);
+        width: 40px;
+        border: none;
+    }
+
+    .bars .bar:first-child {
+        width: 16px;
+    }
+    .bars .bar:last-child {
+        width: 28px;
+    }
 }
 
-.burger-strip {
-    transition: all 0.5s ease;
+.burger-toggle {
+    display: none;
+     &:checked {
+        + .burger {
+            .bars .bar:first-child {
+                transform: rotate(45deg) translateY(1px) translateX(5px);
+            }
+            .bars .bar:nth-child(2) {
+                transform: rotate(-45deg);
+            }
+            .bars .bar:last-child {
+                transform: rotate(45deg) translateY(-13px) translateX(2px);
+            }
+        }
+    }
 }
-.strip div {
-    height: 3px;
-    border-radius: 2px;
-    background: rgb(240, 240, 240);
-    margin: 10px;
-    transition: all 0.55s cubic-bezier(0.075, 0.82, 0.165, 1);
-    width: 40px;
-}
-.burger:hover .strip div {
-    background: white;
-}
-/* BURGER 1 */
-.burger-strip div:first-child {
-    width: 16px;
-}
-.burger-strip div:last-child {
-    width: 28px;
-}
-.burger:hover .burger-strip div:first-child {
-    transform: rotate(45deg) translateY(1px) translateX(5px);
-}
-.burger:hover .burger-strip div:nth-child(2) {
-    transform: rotate(-45deg);
-}
-.burger:hover .burger-strip div:last-child {
-    transform: rotate(45deg) translateY(-13px) translateX(2px);
-}
+
+
+

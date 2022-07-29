@@ -1,6 +1,6 @@
 
 export const Work = () => {
   return (
-    <div>Work</div>
+    <div className='main-layout'>Work</div>
   )
 }

@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Auth = () => {
   return (
-    <div>Auth</div>
+    <div className='main-layout'>Auth</div>
   )
 }

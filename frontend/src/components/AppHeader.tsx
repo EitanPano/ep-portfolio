@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { BurgerMenu } from './smart/BurgerMenu';
 import { MainRoutes } from './smart/MainRoutes';
+import { ToggleTheme } from './smart/ToggleTheme';
 
 export const AppHeader = () => {
     return (
@@ -13,13 +14,13 @@ export const AppHeader = () => {
                     <NavLink to={'/'} className="nav-link"><h2>EP</h2></NavLink>
                 </div>
 
-                <MainRoutes routes={["Work","Contact","About"]}/>
-
-                <ul className="main-menu">
+                <ul className="features">
+                    <ToggleTheme></ToggleTheme>
                     <NavLink to="/auth" className="nav-link">Login</NavLink>
                 </ul>
 
-
+                <MainRoutes routes={["Work","Contact","About"]}/>
+                
             </nav>
         </header>
     );

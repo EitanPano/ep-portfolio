@@ -1,4 +1,5 @@
 .main-layout {
+    margin-top: $appHeader;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
 
     > * {
