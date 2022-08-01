@@ -1,8 +1,8 @@
 export const Home = () => {
     return (
-        <div className="main-layout">
+        <div className="home main-layout background text">
             <section className="grid-container">
-                <h2>Home</h2>
+                <h1>Home</h1>
             </section>
         </div>
     );

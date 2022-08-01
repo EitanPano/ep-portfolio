@@ -1,0 +1,34 @@
+#light {
+    .text {
+        color: $text;
+    }
+    .background {
+        background-color: $background;
+    }
+    .background-sub {
+        background-color: darken($background, 10%);
+    }
+    .burger-bar {
+        background-color: $text;
+    }
+
+}
+
+
+
+
+#dark {
+    .text {
+        color: $text-dark;
+    }
+    .background {
+        background-color: $background-dark;
+    }
+    .background-sub {
+        background-color: darken($background-dark, 5%)
+    }
+    .burger-bar {
+        background-color: $text-dark;
+    }
+
+}

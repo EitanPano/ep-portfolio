@@ -9,6 +9,8 @@
         position: relative;
         cursor: pointer;
         user-select: none;
+        margin: 0 0.5em;
+
         &:after,
         &:before {
             position: relative;
@@ -39,7 +41,7 @@
         backface-visibility: hidden;
         transition: all 0.2s ease;
         font-family: sans-serif;
-        background: lighten($clr5, 5%);
+        background: $primary;
         &:after,
         &:before {
             transform: skew(10deg);
@@ -57,8 +59,9 @@
         &:after {
             left: 100%;
             content: attr(data-tg-on);
+            mix-blend-mode: luminosity;
         }
-
+        
         &:before {
             left: 0;
             content: attr(data-tg-off);
@@ -73,7 +76,7 @@
     }
 
     &:checked + .tgl-btn {
-        background: #86d993;
+        background: $primary-dark;
         &:before {
             left: -100%;
         }
