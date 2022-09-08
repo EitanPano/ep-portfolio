@@ -66,6 +66,12 @@
             left: 0;
             content: attr(data-tg-off);
         }
+
+        &:active {
+            &:before {
+                left: -10%;
+            }
+        }
     }
 
     &:checked + .tgl-btn {

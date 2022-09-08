@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { BurgerMenu } from './smart/BurgerMenu';
+import { BurgerMenu } from './simple/BurgerMenu';
 import { MainRoutes } from './smart/MainRoutes';
 import { ToggleTheme } from './smart/ToggleTheme';
 
