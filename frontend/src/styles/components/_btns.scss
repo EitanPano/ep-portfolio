@@ -11,6 +11,7 @@
     font-weight: bold;
     text-transform: capitalize;
     transition: all 0.3s;
+    transform: scale(2);
 
     &:hover {
         transform: scale(1.1);
