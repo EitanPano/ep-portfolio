@@ -11,6 +11,10 @@
     .burger-bar {
         background-color: $text;
     }
+    .primary {
+        background-color: $primary;
+        border-color: lighten($primary, 15%);
+    }
 }
 
 #dark {
@@ -25,6 +29,10 @@
     }
     .burger-bar {
         background-color: $text-dark;
+    }
+    .primary {
+        background-color: $primary-dark;
+        border-color: lighten($primary-dark, 15%);
     }
 }
 
@@ -47,6 +55,7 @@
         }
     }
 }
+
 @include for-small-layout {
     #light {
         .main-routes .nav-link {

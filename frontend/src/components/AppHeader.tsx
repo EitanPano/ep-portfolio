@@ -5,6 +5,7 @@ import { ToggleTheme } from './smart/ToggleTheme';
 
 import {Theme, useTheme } from '../context/ThemeContext';
 import { localStore } from '../services/utils';
+import { NavButton } from './smart/NavButton';
 
 export const AppHeader = () => {
 
@@ -15,7 +16,6 @@ export const AppHeader = () => {
         localStore.set('theme', currTheme)
         setTheme(currTheme)
     }
-
     
     return (
         <header className="app-header">
@@ -29,7 +29,7 @@ export const AppHeader = () => {
 
                 <ul className="features">
                     <ToggleTheme onSetTheme={onSetTheme} preferredTheme={localStore.get('theme')} />
-                    <NavLink to="/auth" className="nav-link">Login</NavLink>
+                    <button className='btn no-border primary skew'>Resume</button>
                 </ul>
 
                 <MainRoutes routes={["Work","Contact","About"]}/>
