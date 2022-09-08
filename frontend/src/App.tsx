@@ -25,6 +25,7 @@ export const App = () => {
         <ThemeContext.Provider value={{ theme, setTheme }}>
             <Router>
                 <div className="app" id={theme}>
+                    
                     <AppHeader></AppHeader>
                     <Routes>
                         <Route element={<Work />} path="/work"></Route>

@@ -4,6 +4,7 @@ export const Home = () => {
     return (
         <div className="home main-layout background text">
             <h1 className="text-center">Eitan Pano</h1>
+            
             <article className="">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                 exercitationem tempore voluptatem soluta praesentium
@@ -12,7 +13,9 @@ export const Home = () => {
                 neque.
             </article>
 
-            <NavButton to={'/work'} className='center'>My Work</NavButton>
+            <div className='my-2 text-center'>
+                <NavButton to={'/work'} className="round">My Work</NavButton>
+            </div>
         </div>
     );
 };

@@ -1,4 +1,6 @@
 .main-layout {
+    display: flex;
+    flex-direction: column;
     min-height: calc(100vh - $appHeader - $appFooter);
     margin-top: $appHeader;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
