@@ -21,6 +21,10 @@ export const App = () => {
         preferredTheme === Theme.dark ? Theme.dark : Theme.light
     );
 
+    const DOC = document.documentElement;
+    DOC.id = preferredTheme;
+    
+
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>
             <Router>

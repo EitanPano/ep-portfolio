@@ -1,3 +1,5 @@
+
+
 .main-layout {
     display: flex;
     flex-direction: column;
@@ -5,14 +7,15 @@
     margin-top: $appHeader;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
     padding: 0 0.5rem;
+    @include main-padding;
 
-    > * {
-        grid-column: 2;
-    }
+    // > * {
+    //     grid-column: 2;
+    // }
 
-    > *.full {
-        grid-column: 1 / -1;
-    }
+    // *.full {
+    //     grid-column: 1 / -1;
+    // }
 
     transition: background-color 0.5s;
 }
@@ -20,39 +23,66 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat( auto-fill, minmax(12em, 1fr));
-    padding: 0 0.5em;
+    // padding: 0 0.5em;
     gap: 1.5em;
     grid-auto-flow: dense;
+    // @include main-padding;
+
+    > *.full {
+        grid-column: 1 / -1;
+    }
 }
 
 
-@include for-small-layout{
-    .main-layout,
-    .grid-container {
-        padding: 0 3em;
-    }
+// @include for-small-layout{
+//     .main-layout {
+//         padding: 0 3em;
+//     }
+// }
+// @include for-medium-layout{
+//     .main-layout {
+//         padding: 0 5em;
+//     }
+// }
+// @include for-large-layout{
+//     .main-layout {
+//         padding: 0 8em;
+//     }
+// }
+// @include for-x-large-layout{
+//     .main-layout {
+//         padding: 0 12em;
+//     }
+// }
+// @include for-xx-large-layout{
+//     .main-layout {
+//         padding: 0 20em;
+//     }
+// }
+
+// scrollbar scroll-bar
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: $background;
 }
-@include for-medium-layout{
-    .main-layout,
-    .grid-container {
-        padding: 0 5em;
-    }
+
+::-webkit-scrollbar {
+    width: 0.5em;
 }
-@include for-large-layout{
-    .main-layout,
-    .grid-container {
-        padding: 0 8em;
-    }
-}
-@include for-x-large-layout{
-    .main-layout,
-    .grid-container {
-        padding: 0 12em;
-    }
-}
-@include for-xx-large-layout{
-    .main-layout,
-    .grid-container {
-        padding: 0 20em;
-    }
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2em;
+    background-color: $primary;
+    background-image: -webkit-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2) 20%,
+        transparent 20%,
+        transparent 40%,
+        rgba(255, 255, 255, 0.2) 40%,
+        rgba(255, 255, 255, 0.2) 60%,
+        transparent 60%,
+        transparent 80%,
+        rgba(255, 255, 255, 0.2) 80%,
+        transparent
+    );
 }

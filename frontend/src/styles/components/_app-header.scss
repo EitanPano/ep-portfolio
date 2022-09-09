@@ -1,13 +1,12 @@
 @import 'burger-menu';
 
-
-
 .app-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 50;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
     
     .main-nav {
         min-height: 3em;
@@ -17,6 +16,7 @@
         align-items: center;
         grid-template-columns: 1fr 1fr 1fr;
         transition: background-color 0.5s;
+        @include main-padding;
     }
 
     .nav-link {
@@ -27,6 +27,7 @@
         color: inherit;
         position: relative;
         text-decoration: none;
+        font-weight: bold;
     }
 
     .main-routes,
@@ -69,7 +70,7 @@
             line-height: calc($appHeader * 0.8);
         }
     }
-    
+
     .main-routes .nav-link.active {
         background-color: #37c082;
         box-shadow: 6px 6px 0 0 rgb(95, 95, 95);
@@ -91,20 +92,20 @@
     .burger-toggle:not(:checked) {
         & ~ .main-routes {
             opacity: 0;
-            pointer-events: none
+            pointer-events: none;
         }
     }
 }
 
 @include for-small-layout {
-    #dark, #light {
+    #dark,
+    #light {
         .background-sub {
             background-color: transparent;
         }
     }
 
     .app-header {
-
         .main-nav {
             grid-template-columns: 1fr 2fr 1fr;
         }

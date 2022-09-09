@@ -17,7 +17,6 @@
     }
 
     &.skew {
-        transform: skew(-10deg);
         &:hover {
             transform: skew(-10deg) scale(1.1);
         }
@@ -45,3 +44,5 @@
         border: none;
     }
 }
+
+

@@ -5,16 +5,16 @@ import { ToggleTheme } from './smart/ToggleTheme';
 
 import {Theme, useTheme } from '../context/ThemeContext';
 import { localStore } from '../services/utils';
-import { NavButton } from './smart/NavButton';
+
 
 export const AppHeader = () => {
-
-    const {theme, setTheme} = useTheme()
+    
+    const {theme, setTheme} = useTheme();
 
     const onSetTheme = () => {
-        const currTheme = (theme === 'light' ? Theme.dark : Theme.light)
-        localStore.set('theme', currTheme)
-        setTheme(currTheme)
+        const currTheme = (theme === 'light' ? Theme.dark : Theme.light);
+        localStore.set('theme', currTheme);
+        setTheme(currTheme);
     }
     
     return (

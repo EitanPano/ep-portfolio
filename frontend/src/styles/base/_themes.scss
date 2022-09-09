@@ -15,6 +15,13 @@
         background-color: $primary;
         border-color: lighten($primary, 15%);
     }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: $primary;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: $background;
+    }
 }
 
 #dark {
@@ -33,6 +40,13 @@
     .primary {
         background-color: $primary-dark;
         border-color: lighten($primary-dark, 15%);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: lighten($primary-dark, 3);
+    }
+    ::-webkit-scrollbar-track {
+        background-color: $background-dark;
     }
 }
 
