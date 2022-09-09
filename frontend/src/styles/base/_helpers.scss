@@ -1,30 +1,40 @@
 // * MARGIN *//
-.m-1 { margin: 1em; }
-.m-2 { margin: 2em; }
-.m-3 { margin: 3em; }
-.mx-1 { margin-inline: 1em; }
-.mx-2 { margin-inline: 2em; }
-.mx-3 { margin-inline: 3em; }
-.my-1 { margin-block: 1em; }
-.my-2 { margin-block: 2em ; }
-.my-3 { margin-block: 3em; }
+.m-1 {
+    margin: 1em;
+}
+.m-2 {
+    margin: 2em;
+}
+.m-3 {
+    margin: 3em;
+}
+.mx-1 {
+    margin-inline: 1em;
+}
+.mx-2 {
+    margin-inline: 2em;
+}
+.mx-3 {
+    margin-inline: 3em;
+}
+.my-1 {
+    margin-block: 1em;
+}
+.my-2 {
+    margin-block: 2em;
+}
+.my-3 {
+    margin-block: 3em;
+}
 
-// .border {
-//     border: 2px solid #fbfbfb;
-// }
+.skew {
+    transform: skew(-10deg);
+}
 
-
+.round {
+    border-radius: 2em;
+}
 
 .text-center {
     text-align: center;
 }
-
-// .center {
-//     display: flex;
-//     justify-content: start;
-//     align-items: center;
-// }
-
-// .center {
-//     margin: 0 auto;
-// }

@@ -1,0 +1,25 @@
+.card-preview {
+
+    background-color: red;
+    > img {
+        background-color: blue;
+    }
+    
+    > h3 {
+        background-color: yellow;
+    }
+
+    > p {
+        background-color: orange;
+    }
+
+    > .labels {
+        > .label {
+            background: teal;
+        }
+    }
+
+    > a {
+        background-color: pink;
+    }
+}
